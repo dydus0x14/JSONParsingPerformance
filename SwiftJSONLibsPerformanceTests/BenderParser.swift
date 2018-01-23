@@ -29,5 +29,5 @@ let itemRule = ClassRule(Item())
     .expect("friends", ArrayRule(itemRule: friendRule), { $0.friends = $1 })
 
 let itemsRule = ArrayRule(itemRule: itemRule)
-
+let concurrentItemsRule = ConcurrentArrayRule(itemRule: itemRule)
     

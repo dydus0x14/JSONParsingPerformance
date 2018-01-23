@@ -11,6 +11,32 @@ import ObjectMapper
 import Unbox
 import Marshal
 
+func validateWithBender(_ data: Data) {
+    let _ = try? itemsRule.validateData(data)
+}
+
+func validateWithConcurrentBender(_ data: Data) {
+    let _ = try! concurrentItemsRule.validateData(data)
+}
+
+func validateWithFreddy(_ data: Data) {
+    let json = try! JSON(data: data)
+    let _ = try! json.decodedArray(alongPath: .nullBecomesNil, type: Item.self)
+}
+
+func validateWithObjectMapper(_ data: Data) {
+    let json = try! JSONSerialization.jsonObject(with: data, options: []) as AnyObject
+    let _ = Mapper<Item>().mapArray(JSONObject: json)
+}
+
+func validateWithObjectUnbox(_ data: Data) {
+    let _: [Item] = try! unbox(data: data)
+}
+
+func validateWithMarshal(_ data: Data) {
+    let _: [Item] = try! JSONParser.JSONArrayWithData(data).map{ try! Item(object: $0) }
+}
+
 class Friend: JSONDecodable, Mappable, Unboxable, Unmarshaling {
     var ID: Int!
     var name: String!
@@ -35,8 +61,8 @@ class Friend: JSONDecodable, Mappable, Unboxable, Unmarshaling {
     
     // Unbox
     required init(unboxer: Unbox.Unboxer) throws {
-        ID = try unboxer.unbox(key: "id")
-        name = try unboxer.unbox(key: "name")
+        ID = unboxer.unbox(key: "id")
+        name = unboxer.unbox(key: "name")
     }
     
     // Marshal
@@ -107,20 +133,20 @@ class Item: JSONDecodable, Mappable, Unboxable, Unmarshaling {
     
     // Unbox
     required init(unboxer: Unbox.Unboxer) throws {
-        ID = try unboxer.unbox(key: "_id")
-        index = try unboxer.unbox(key: "index")
-        isActive = try unboxer.unbox(key: "isActive")
-        guid = try unboxer.unbox(key: "guid")
-        age = try unboxer.unbox(key: "age")
-        eyeColor = try unboxer.unbox(key: "eyeColor")
-        name = try unboxer.unbox(key: "name")
+        ID = unboxer.unbox(key: "_id")
+        index = unboxer.unbox(key: "index")
+        isActive = unboxer.unbox(key: "isActive")
+        guid = unboxer.unbox(key: "guid")
+        age = unboxer.unbox(key: "age")
+        eyeColor = unboxer.unbox(key: "eyeColor")
+        name = unboxer.unbox(key: "name")
         gender = unboxer.unbox(key: "gender")
-        email = try unboxer.unbox(key: "email")
-        phone = try unboxer.unbox(key: "phone")
-        longitude = try unboxer.unbox(keyPath: "geolocation.longitude")
-        latitude = try unboxer.unbox(keyPath: "geolocation.latitude")
-        tags = try unboxer.unbox(key: "tags")
-        friends = try unboxer.unbox(key: "friends")
+        email = unboxer.unbox(key: "email")
+        phone = unboxer.unbox(key: "phone")
+        longitude = unboxer.unbox(keyPath: "geolocation.longitude")
+        latitude = unboxer.unbox(keyPath: "geolocation.latitude")
+        tags = unboxer.unbox(key: "tags")
+        friends = unboxer.unbox(key: "friends")
     }
     
     // Marshal

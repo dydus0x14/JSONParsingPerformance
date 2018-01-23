@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10866EE72017DB9800650F7F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781391C1E12B25700677622 /* Item.swift */; };
+		10866EE82017DB9C00650F7F /* BenderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781391E1E12B29E00677622 /* BenderParser.swift */; };
+		10866EE92017DC3400650F7F /* Marshal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278139221E12E2AC00677622 /* Marshal.framework */; };
+		10866EEA2017DC3400650F7F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC751E0D8C620038F3CC /* Argo.framework */; };
+		10866EEB2017DC3400650F7F /* Bender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC761E0D8C620038F3CC /* Bender.framework */; };
+		10866EEC2017DC3400650F7F /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC771E0D8C620038F3CC /* Freddy.framework */; };
+		10866EED2017DC3400650F7F /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC781E0D8C620038F3CC /* Gloss.framework */; };
+		10866EEE2017DC3400650F7F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC7A1E0D8C620038F3CC /* ObjectMapper.framework */; };
+		10866EEF2017DC3400650F7F /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC7C1E0D8C620038F3CC /* Runes.framework */; };
+		10866EF02017DC3400650F7F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC7D1E0D8C620038F3CC /* SwiftyJSON.framework */; };
+		10866EF12017DC3400650F7F /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0AC7E1E0D8C620038F3CC /* Unbox.framework */; };
+		10866EF32017DC9600650F7F /* Marshal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278139221E12E2AC00677622 /* Marshal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF42017DC9600650F7F /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC751E0D8C620038F3CC /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF52017DC9600650F7F /* Bender.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC761E0D8C620038F3CC /* Bender.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF62017DC9600650F7F /* Freddy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC771E0D8C620038F3CC /* Freddy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF72017DC9600650F7F /* Gloss.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC781E0D8C620038F3CC /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF82017DC9600650F7F /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC7A1E0D8C620038F3CC /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EF92017DC9600650F7F /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC7C1E0D8C620038F3CC /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EFA2017DC9600650F7F /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC7D1E0D8C620038F3CC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EFB2017DC9600650F7F /* Unbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A0AC7E1E0D8C620038F3CC /* Unbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10866EFC2017E14600650F7F /* five_megs.json in Resources */ = {isa = PBXBuildFile; fileRef = 2781391A1E12B20100677622 /* five_megs.json */; };
 		2734F2401E0D6AA00061E66A /* DeserializationPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734F23F1E0D6AA00061E66A /* DeserializationPerformanceTests.swift */; };
 		2766452F1E0D46C300082F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766452E1E0D46C300082F66 /* AppDelegate.swift */; };
 		276645311E0D46C300082F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276645301E0D46C300082F66 /* ViewController.swift */; };
@@ -38,6 +59,27 @@
 			remoteInfo = SwiftJSONLibsPerformance;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10866EF22017DC7A00650F7F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10866EF32017DC9600650F7F /* Marshal.framework in CopyFiles */,
+				10866EF42017DC9600650F7F /* Argo.framework in CopyFiles */,
+				10866EF52017DC9600650F7F /* Bender.framework in CopyFiles */,
+				10866EF62017DC9600650F7F /* Freddy.framework in CopyFiles */,
+				10866EF72017DC9600650F7F /* Gloss.framework in CopyFiles */,
+				10866EF82017DC9600650F7F /* ObjectMapper.framework in CopyFiles */,
+				10866EF92017DC9600650F7F /* Runes.framework in CopyFiles */,
+				10866EFA2017DC9600650F7F /* SwiftyJSON.framework in CopyFiles */,
+				10866EFB2017DC9600650F7F /* Unbox.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2734F23D1E0D6AA00061E66A /* SwiftJSONLibsPerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftJSONLibsPerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +141,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10866EE92017DC3400650F7F /* Marshal.framework in Frameworks */,
+				10866EEA2017DC3400650F7F /* Argo.framework in Frameworks */,
+				10866EEB2017DC3400650F7F /* Bender.framework in Frameworks */,
+				10866EEC2017DC3400650F7F /* Freddy.framework in Frameworks */,
+				10866EED2017DC3400650F7F /* Gloss.framework in Frameworks */,
+				10866EEE2017DC3400650F7F /* ObjectMapper.framework in Frameworks */,
+				10866EEF2017DC3400650F7F /* Runes.framework in Frameworks */,
+				10866EF02017DC3400650F7F /* SwiftyJSON.framework in Frameworks */,
+				10866EF12017DC3400650F7F /* Unbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +257,7 @@
 				276645271E0D46C200082F66 /* Sources */,
 				276645281E0D46C200082F66 /* Frameworks */,
 				276645291E0D46C200082F66 /* Resources */,
+				10866EF22017DC7A00650F7F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -273,6 +325,7 @@
 				276645391E0D46C300082F66 /* LaunchScreen.storyboard in Resources */,
 				276645361E0D46C300082F66 /* Assets.xcassets in Resources */,
 				276645341E0D46C300082F66 /* Main.storyboard in Resources */,
+				10866EFC2017E14600650F7F /* five_megs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				276645311E0D46C300082F66 /* ViewController.swift in Sources */,
+				10866EE72017DB9800650F7F /* Item.swift in Sources */,
+				10866EE82017DB9C00650F7F /* BenderParser.swift in Sources */,
 				2766452F1E0D46C300082F66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +541,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q9N9K496FM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftJSONLibsPerformance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dydus.SwiftJSONLibsPerformance;
@@ -499,6 +558,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q9N9K496FM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftJSONLibsPerformance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dydus.SwiftJSONLibsPerformance;

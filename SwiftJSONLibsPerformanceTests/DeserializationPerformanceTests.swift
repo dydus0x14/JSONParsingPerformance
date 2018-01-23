@@ -27,33 +27,37 @@ class DeserializationPerformanceTests: XCTestCase {
     
     func testPerformanceBender() {
         measure {
-            let _ = try? itemsRule.validateData(self.data)
+            validateWithBender(self.data)
+        }
+    }
+    
+    func testPerformanceConcurrentBender() {
+        measure {
+            validateWithConcurrentBender(self.data)
         }
     }
     
     func testPerformanceFreddy() {
         measure {
-            let json = try! JSON(data: self.data)
-            let _ = try! json.decodedArray(alongPath: .nullBecomesNil, type: Item.self)
+            validateWithFreddy(self.data)
         }
     }
     
     func testPerformanceObjectMapper() {
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as AnyObject
         measure {
-            let _ = Mapper<Item>().mapArray(JSONObject: json)
+            validateWithObjectMapper(self.data)
         }
     }
     
     func testPerformanceObjectUnbox() {
         measure {
-            let _: [Item] = try! unbox(data: self.data)
+            validateWithObjectUnbox(self.data)
         }
     }
     
     func testPerformanceObjectMarshal() {
         measure {
-            let _: [Item] = try! JSONParser.JSONArrayWithData(self.data).map{ try! Item(object: $0) }
+            validateWithMarshal(self.data)
         }
     }
 }
